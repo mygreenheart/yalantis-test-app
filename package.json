@@ -1,8 +1,8 @@
 {
+  "homepage": "https://mygreenheart.github.io/yalantis-test-app/",
   "name": "yalantis-test-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mygreenheart.github.io/yalantis-test-app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
