@@ -4,6 +4,10 @@ import EmployeesBirthday from "./components/EmployeesBirthday/EmployeesBirthday"
 import './App.css';
 
 function App() {
+  
+  if (localStorage.getItem("employees") === null) {
+    localStorage.setItem("employees", JSON.stringify([]))
+  }
   const [employeesData, setEmployeesData] = useState([])
   const [employeesBirthday, setEmployeesBirthday] = useState(JSON.parse(localStorage.getItem("employees")))
 
@@ -11,7 +15,7 @@ function App() {
   useEffect(() => {
     fetch("https://yalantis-react-school-api.yalantis.com/api/task0/users")
       .then(response => response.json())
-      .then(json => { setEmployeesData(json)})
+      .then(json => { setEmployeesData(json) })
     localStorage.setItem("employees", JSON.stringify(employeesBirthday))
   }, [employeesBirthday])
 
